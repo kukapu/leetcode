@@ -17,20 +17,29 @@ function twoSum(nums: number[], target: number): number[] {
 };
 
 
+// PRIMERA SOLCION NO OPTIMA NO TRICKS
+// function twoSum(nums: number[], target: number): number[] {
+//     for(let i = 0; i < nums.length; i++){
+//         for(let j = 1; j < nums.length; j++){
+//             if(nums[i] + nums[j] === target && i !== j) return [i,j]
+//         }
+//     }
+// };
+
 
 // FASTER SOLUTION
-function twoSumFAST(nums: number[], target: number): number[] {
-    const hashMap = {}
+// function twoSum(nums: number[], target: number): number[] {
+//     const hashMap = {}
 
-    for(let i = 0; i < nums.length; i += 1) {
-        const currentNumber = nums[i];
-        const pair = target - currentNumber;
+//     for(let i = 0; i < nums.length; i += 1) {
+//         const currentNumber = nums[i];
+//         const pair = target - currentNumber;
 
-        if (hashMap[pair] !== undefined) {
-            return [hashMap[pair], i];
-        }
+//         if (hashMap[pair] !== undefined) {
+//             return [hashMap[pair], i];
+//         }
 
-        hashMap[currentNumber] = i;
-    }
-    return []
-};
+//         hashMap[currentNumber] = i;
+//     }
+//     return []
+// };
